@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7837B2822A0BFA7E00FA9D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2812A0BFA7E00FA9D0F /* AppDelegate.swift */; };
-		7837B2842A0BFA7E00FA9D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2832A0BFA7E00FA9D0F /* SceneDelegate.swift */; };
-		7837B2862A0BFA7E00FA9D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2852A0BFA7E00FA9D0F /* ViewController.swift */; };
 		7837B2892A0BFA7E00FA9D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7837B2872A0BFA7E00FA9D0F /* Main.storyboard */; };
 		7837B28B2A0BFA8100FA9D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7837B28A2A0BFA8100FA9D0F /* Assets.xcassets */; };
 		7837B28E2A0BFA8100FA9D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7837B28C2A0BFA8100FA9D0F /* LaunchScreen.storyboard */; };
-		7837B2992A0BFA8100FA9D0F /* unwireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2982A0BFA8100FA9D0F /* unwireTests.swift */; };
-		7837B2A32A0BFA8100FA9D0F /* unwireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2A22A0BFA8100FA9D0F /* unwireUITests.swift */; };
-		7837B2A52A0BFA8100FA9D0F /* unwireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2A42A0BFA8100FA9D0F /* unwireUITestsLaunchTests.swift */; };
+		7837B2992A0BFA8100FA9D0F /* UnwireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2982A0BFA8100FA9D0F /* UnwireTests.swift */; };
+		7837B2A32A0BFA8100FA9D0F /* UnwireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2A22A0BFA8100FA9D0F /* UnwireUITests.swift */; };
+		7837B2A52A0BFA8100FA9D0F /* UnwireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2A42A0BFA8100FA9D0F /* UnwireUITestsLaunchTests.swift */; };
+		7837B2B92A0C016300FA9D0F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2B82A0C016300FA9D0F /* SearchViewController.swift */; };
+		7837B2BB2A0C031A00FA9D0F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2BA2A0C031A00FA9D0F /* AppCoordinator.swift */; };
+		7837B2BF2A0C036D00FA9D0F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2BE2A0C036D00FA9D0F /* Coordinator.swift */; };
+		7837B2C22A0C045E00FA9D0F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2C12A0C045E00FA9D0F /* NavigationController.swift */; };
+		7837B2C72A0C05FE00FA9D0F /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2C62A0C05FE00FA9D0F /* ViewControllerFactory.swift */; };
+		7837B2CB2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2CA2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +40,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7837B27E2A0BFA7E00FA9D0F /* unwire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unwire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7837B27E2A0BFA7E00FA9D0F /* Unwire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unwire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7837B2812A0BFA7E00FA9D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7837B2832A0BFA7E00FA9D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7837B2852A0BFA7E00FA9D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7837B2882A0BFA7E00FA9D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7837B28A2A0BFA8100FA9D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7837B28D2A0BFA8100FA9D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7837B28F2A0BFA8100FA9D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7837B2942A0BFA8100FA9D0F /* unwireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unwireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7837B2982A0BFA8100FA9D0F /* unwireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unwireTests.swift; sourceTree = "<group>"; };
-		7837B29E2A0BFA8100FA9D0F /* unwireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unwireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7837B2A22A0BFA8100FA9D0F /* unwireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unwireUITests.swift; sourceTree = "<group>"; };
-		7837B2A42A0BFA8100FA9D0F /* unwireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unwireUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7837B2942A0BFA8100FA9D0F /* UnwireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnwireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7837B2982A0BFA8100FA9D0F /* UnwireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwireTests.swift; sourceTree = "<group>"; };
+		7837B29E2A0BFA8100FA9D0F /* UnwireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnwireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7837B2A22A0BFA8100FA9D0F /* UnwireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwireUITests.swift; sourceTree = "<group>"; };
+		7837B2A42A0BFA8100FA9D0F /* UnwireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwireUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7837B2B82A0C016300FA9D0F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7837B2BA2A0C031A00FA9D0F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7837B2BE2A0C036D00FA9D0F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7837B2C12A0C045E00FA9D0F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		7837B2C62A0C05FE00FA9D0F /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		7837B2CA2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+AvailableStoryboards.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,9 @@
 		7837B2752A0BFA7D00FA9D0F = {
 			isa = PBXGroup;
 			children = (
-				7837B2802A0BFA7E00FA9D0F /* unwire */,
-				7837B2972A0BFA8100FA9D0F /* unwireTests */,
-				7837B2A12A0BFA8100FA9D0F /* unwireUITests */,
+				7837B2802A0BFA7E00FA9D0F /* Unwire */,
+				7837B2972A0BFA8100FA9D0F /* UnwireTests */,
+				7837B2A12A0BFA8100FA9D0F /* UnwireUITests */,
 				7837B27F2A0BFA7E00FA9D0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,50 +97,150 @@
 		7837B27F2A0BFA7E00FA9D0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7837B27E2A0BFA7E00FA9D0F /* unwire.app */,
-				7837B2942A0BFA8100FA9D0F /* unwireTests.xctest */,
-				7837B29E2A0BFA8100FA9D0F /* unwireUITests.xctest */,
+				7837B27E2A0BFA7E00FA9D0F /* Unwire.app */,
+				7837B2942A0BFA8100FA9D0F /* UnwireTests.xctest */,
+				7837B29E2A0BFA8100FA9D0F /* UnwireUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7837B2802A0BFA7E00FA9D0F /* unwire */ = {
+		7837B2802A0BFA7E00FA9D0F /* Unwire */ = {
 			isa = PBXGroup;
 			children = (
+				7837B2B42A0BFE6800FA9D0F /* App */,
+				7837B2B32A0BFE1D00FA9D0F /* Model */,
+				7837B2B22A0BFE1000FA9D0F /* ViewModel */,
+				7837B2B12A0BFD7C00FA9D0F /* View */,
+				7837B2B62A0BFFDA00FA9D0F /* Storyboards */,
+				7837B2BC2A0C034500FA9D0F /* UIKitUtils */,
+				7837B2C92A0C074300FA9D0F /* Extensions */,
+			);
+			path = Unwire;
+			sourceTree = "<group>";
+		};
+		7837B2972A0BFA8100FA9D0F /* UnwireTests */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2982A0BFA8100FA9D0F /* UnwireTests.swift */,
+			);
+			path = UnwireTests;
+			sourceTree = "<group>";
+		};
+		7837B2A12A0BFA8100FA9D0F /* UnwireUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2A22A0BFA8100FA9D0F /* UnwireUITests.swift */,
+				7837B2A42A0BFA8100FA9D0F /* UnwireUITestsLaunchTests.swift */,
+			);
+			path = UnwireUITests;
+			sourceTree = "<group>";
+		};
+		7837B2B12A0BFD7C00FA9D0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2B72A0C002F00FA9D0F /* SearchViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7837B2B22A0BFE1000FA9D0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7837B2B32A0BFE1D00FA9D0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7837B2B42A0BFE6800FA9D0F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2B52A0BFE7500FA9D0F /* SupportingFiles */,
 				7837B2812A0BFA7E00FA9D0F /* AppDelegate.swift */,
-				7837B2832A0BFA7E00FA9D0F /* SceneDelegate.swift */,
-				7837B2852A0BFA7E00FA9D0F /* ViewController.swift */,
-				7837B2872A0BFA7E00FA9D0F /* Main.storyboard */,
-				7837B28A2A0BFA8100FA9D0F /* Assets.xcassets */,
-				7837B28C2A0BFA8100FA9D0F /* LaunchScreen.storyboard */,
+				7837B2BA2A0C031A00FA9D0F /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7837B2B52A0BFE7500FA9D0F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				7837B28F2A0BFA8100FA9D0F /* Info.plist */,
+				7837B28A2A0BFA8100FA9D0F /* Assets.xcassets */,
 			);
-			path = unwire;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		7837B2972A0BFA8100FA9D0F /* unwireTests */ = {
+		7837B2B62A0BFFDA00FA9D0F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				7837B2982A0BFA8100FA9D0F /* unwireTests.swift */,
+				7837B28C2A0BFA8100FA9D0F /* LaunchScreen.storyboard */,
+				7837B2872A0BFA7E00FA9D0F /* Main.storyboard */,
 			);
-			path = unwireTests;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		7837B2A12A0BFA8100FA9D0F /* unwireUITests */ = {
+		7837B2B72A0C002F00FA9D0F /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7837B2A22A0BFA8100FA9D0F /* unwireUITests.swift */,
-				7837B2A42A0BFA8100FA9D0F /* unwireUITestsLaunchTests.swift */,
+				7837B2B82A0C016300FA9D0F /* SearchViewController.swift */,
 			);
-			path = unwireUITests;
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		7837B2BC2A0C034500FA9D0F /* UIKitUtils */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2C52A0C05E000FA9D0F /* UIViewController */,
+				7837B2C02A0C045500FA9D0F /* NavigationController */,
+				7837B2BD2A0C035800FA9D0F /* Coordinator */,
+			);
+			path = UIKitUtils;
+			sourceTree = "<group>";
+		};
+		7837B2BD2A0C035800FA9D0F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2BE2A0C036D00FA9D0F /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7837B2C02A0C045500FA9D0F /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2C12A0C045E00FA9D0F /* NavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		7837B2C52A0C05E000FA9D0F /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2C62A0C05FE00FA9D0F /* ViewControllerFactory.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		7837B2C92A0C074300FA9D0F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2CA2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7837B27D2A0BFA7E00FA9D0F /* unwire */ = {
+		7837B27D2A0BFA7E00FA9D0F /* Unwire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7837B2A82A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "unwire" */;
+			buildConfigurationList = 7837B2A82A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "Unwire" */;
 			buildPhases = (
 				7837B27A2A0BFA7E00FA9D0F /* Sources */,
 				7837B27B2A0BFA7E00FA9D0F /* Frameworks */,
@@ -142,14 +250,14 @@
 			);
 			dependencies = (
 			);
-			name = unwire;
+			name = Unwire;
 			productName = unwire;
-			productReference = 7837B27E2A0BFA7E00FA9D0F /* unwire.app */;
+			productReference = 7837B27E2A0BFA7E00FA9D0F /* Unwire.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7837B2932A0BFA8100FA9D0F /* unwireTests */ = {
+		7837B2932A0BFA8100FA9D0F /* UnwireTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7837B2AB2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "unwireTests" */;
+			buildConfigurationList = 7837B2AB2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "UnwireTests" */;
 			buildPhases = (
 				7837B2902A0BFA8100FA9D0F /* Sources */,
 				7837B2912A0BFA8100FA9D0F /* Frameworks */,
@@ -160,14 +268,14 @@
 			dependencies = (
 				7837B2962A0BFA8100FA9D0F /* PBXTargetDependency */,
 			);
-			name = unwireTests;
+			name = UnwireTests;
 			productName = unwireTests;
-			productReference = 7837B2942A0BFA8100FA9D0F /* unwireTests.xctest */;
+			productReference = 7837B2942A0BFA8100FA9D0F /* UnwireTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7837B29D2A0BFA8100FA9D0F /* unwireUITests */ = {
+		7837B29D2A0BFA8100FA9D0F /* UnwireUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7837B2AE2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "unwireUITests" */;
+			buildConfigurationList = 7837B2AE2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "UnwireUITests" */;
 			buildPhases = (
 				7837B29A2A0BFA8100FA9D0F /* Sources */,
 				7837B29B2A0BFA8100FA9D0F /* Frameworks */,
@@ -178,9 +286,9 @@
 			dependencies = (
 				7837B2A02A0BFA8100FA9D0F /* PBXTargetDependency */,
 			);
-			name = unwireUITests;
+			name = UnwireUITests;
 			productName = unwireUITests;
-			productReference = 7837B29E2A0BFA8100FA9D0F /* unwireUITests.xctest */;
+			productReference = 7837B29E2A0BFA8100FA9D0F /* UnwireUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +314,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7837B2792A0BFA7D00FA9D0F /* Build configuration list for PBXProject "unwire" */;
+			buildConfigurationList = 7837B2792A0BFA7D00FA9D0F /* Build configuration list for PBXProject "Unwire" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +327,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7837B27D2A0BFA7E00FA9D0F /* unwire */,
-				7837B2932A0BFA8100FA9D0F /* unwireTests */,
-				7837B29D2A0BFA8100FA9D0F /* unwireUITests */,
+				7837B27D2A0BFA7E00FA9D0F /* Unwire */,
+				7837B2932A0BFA8100FA9D0F /* UnwireTests */,
+				7837B29D2A0BFA8100FA9D0F /* UnwireUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,9 +366,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7837B2862A0BFA7E00FA9D0F /* ViewController.swift in Sources */,
+				7837B2BF2A0C036D00FA9D0F /* Coordinator.swift in Sources */,
+				7837B2C22A0C045E00FA9D0F /* NavigationController.swift in Sources */,
+				7837B2BB2A0C031A00FA9D0F /* AppCoordinator.swift in Sources */,
+				7837B2CB2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift in Sources */,
+				7837B2C72A0C05FE00FA9D0F /* ViewControllerFactory.swift in Sources */,
+				7837B2B92A0C016300FA9D0F /* SearchViewController.swift in Sources */,
 				7837B2822A0BFA7E00FA9D0F /* AppDelegate.swift in Sources */,
-				7837B2842A0BFA7E00FA9D0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7837B2992A0BFA8100FA9D0F /* unwireTests.swift in Sources */,
+				7837B2992A0BFA8100FA9D0F /* UnwireTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +388,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7837B2A52A0BFA8100FA9D0F /* unwireUITestsLaunchTests.swift in Sources */,
-				7837B2A32A0BFA8100FA9D0F /* unwireUITests.swift in Sources */,
+				7837B2A52A0BFA8100FA9D0F /* UnwireUITestsLaunchTests.swift in Sources */,
+				7837B2A32A0BFA8100FA9D0F /* UnwireUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +398,12 @@
 /* Begin PBXTargetDependency section */
 		7837B2962A0BFA8100FA9D0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7837B27D2A0BFA7E00FA9D0F /* unwire */;
+			target = 7837B27D2A0BFA7E00FA9D0F /* Unwire */;
 			targetProxy = 7837B2952A0BFA8100FA9D0F /* PBXContainerItemProxy */;
 		};
 		7837B2A02A0BFA8100FA9D0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7837B27D2A0BFA7E00FA9D0F /* unwire */;
+			target = 7837B27D2A0BFA7E00FA9D0F /* Unwire */;
 			targetProxy = 7837B29F2A0BFA8100FA9D0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,7 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = unwire/Info.plist;
+				INFOPLIST_FILE = Unwire/App/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -465,7 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = unwire/Info.plist;
+				INFOPLIST_FILE = Unwire/App/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -499,7 +611,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unwire.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/unwire";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unwire.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unwire";
 			};
 			name = Debug;
 		};
@@ -518,7 +630,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unwire.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/unwire";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unwire.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unwire";
 			};
 			name = Release;
 		};
@@ -559,7 +671,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7837B2792A0BFA7D00FA9D0F /* Build configuration list for PBXProject "unwire" */ = {
+		7837B2792A0BFA7D00FA9D0F /* Build configuration list for PBXProject "Unwire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7837B2A62A0BFA8100FA9D0F /* Debug */,
@@ -568,7 +680,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7837B2A82A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "unwire" */ = {
+		7837B2A82A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "Unwire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7837B2A92A0BFA8100FA9D0F /* Debug */,
@@ -577,7 +689,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7837B2AB2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "unwireTests" */ = {
+		7837B2AB2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "UnwireTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7837B2AC2A0BFA8100FA9D0F /* Debug */,
@@ -586,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7837B2AE2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "unwireUITests" */ = {
+		7837B2AE2A0BFA8100FA9D0F /* Build configuration list for PBXNativeTarget "UnwireUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7837B2AF2A0BFA8100FA9D0F /* Debug */,
