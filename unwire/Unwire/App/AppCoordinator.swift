@@ -21,9 +21,12 @@ class AppCoordinator: NSObject, Coordinator {
     
     var childCoordinators: [Coordinator] = []
     
+    var services: Services
+    
     init(navigationController: UINavigationController, window: UIWindow?) {
         self.navigationController = navigationController
         self.window = window
+        self.services = Services()
         super.init()
     }
     
@@ -37,7 +40,7 @@ class AppCoordinator: NSObject, Coordinator {
     func goTo(destination: Destination){
         switch destination {
         case .Search:
-            let searchViewController = SearchViewController.make("")
+            let searchViewController = SearchViewController.make(services.network.musicNetworkService)
             searchViewController.coordinator = self
             navigationController.pushViewController(searchViewController, animated: true)
         }

@@ -20,6 +20,15 @@
 		7837B2C22A0C045E00FA9D0F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2C12A0C045E00FA9D0F /* NavigationController.swift */; };
 		7837B2C72A0C05FE00FA9D0F /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2C62A0C05FE00FA9D0F /* ViewControllerFactory.swift */; };
 		7837B2CB2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2CA2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift */; };
+		7837B2CF2A0C094100FA9D0F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2CE2A0C094100FA9D0F /* Environment.swift */; };
+		7837B2D12A0C098300FA9D0F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2D02A0C098300FA9D0F /* NetworkError.swift */; };
+		7837B2D32A0C0A0800FA9D0F /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2D22A0C0A0800FA9D0F /* NetworkProvider.swift */; };
+		7837B2D52A0C0A2600FA9D0F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2D42A0C0A2600FA9D0F /* NetworkService.swift */; };
+		7837B2D72A0C0A4F00FA9D0F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2D62A0C0A4F00FA9D0F /* SessionManager.swift */; };
+		7837B2D92A0C0A6C00FA9D0F /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2D82A0C0A6C00FA9D0F /* SessionProtocol.swift */; };
+		7837B2DB2A0C0E8E00FA9D0F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2DA2A0C0E8E00FA9D0F /* Services.swift */; };
+		7837B2DE2A0C127F00FA9D0F /* MusicNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2DD2A0C127F00FA9D0F /* MusicNetworkService.swift */; };
+		7837B2E02A0C12B500FA9D0F /* CommonNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2DF2A0C12B500FA9D0F /* CommonNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,15 @@
 		7837B2C12A0C045E00FA9D0F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		7837B2C62A0C05FE00FA9D0F /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		7837B2CA2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+AvailableStoryboards.swift"; sourceTree = "<group>"; };
+		7837B2CE2A0C094100FA9D0F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		7837B2D02A0C098300FA9D0F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		7837B2D22A0C0A0800FA9D0F /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		7837B2D42A0C0A2600FA9D0F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7837B2D62A0C0A4F00FA9D0F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		7837B2D82A0C0A6C00FA9D0F /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
+		7837B2DA2A0C0E8E00FA9D0F /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		7837B2DD2A0C127F00FA9D0F /* MusicNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicNetworkService.swift; sourceTree = "<group>"; };
+		7837B2DF2A0C12B500FA9D0F /* CommonNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +131,7 @@
 				7837B2B12A0BFD7C00FA9D0F /* View */,
 				7837B2B62A0BFFDA00FA9D0F /* Storyboards */,
 				7837B2BC2A0C034500FA9D0F /* UIKitUtils */,
+				7837B2CC2A0C089100FA9D0F /* Services */,
 				7837B2C92A0C074300FA9D0F /* Extensions */,
 			);
 			path = Unwire;
@@ -233,6 +252,38 @@
 				7837B2CA2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7837B2CC2A0C089100FA9D0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2DC2A0C126500FA9D0F /* NetworkServices */,
+				7837B2CD2A0C092A00FA9D0F /* NetworkProvider */,
+				7837B2DA2A0C0E8E00FA9D0F /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7837B2CD2A0C092A00FA9D0F /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2CE2A0C094100FA9D0F /* Environment.swift */,
+				7837B2D02A0C098300FA9D0F /* NetworkError.swift */,
+				7837B2D22A0C0A0800FA9D0F /* NetworkProvider.swift */,
+				7837B2D42A0C0A2600FA9D0F /* NetworkService.swift */,
+				7837B2D62A0C0A4F00FA9D0F /* SessionManager.swift */,
+				7837B2D82A0C0A6C00FA9D0F /* SessionProtocol.swift */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		7837B2DC2A0C126500FA9D0F /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2DF2A0C12B500FA9D0F /* CommonNetworkService.swift */,
+				7837B2DD2A0C127F00FA9D0F /* MusicNetworkService.swift */,
+			);
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,11 +417,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7837B2D52A0C0A2600FA9D0F /* NetworkService.swift in Sources */,
+				7837B2D92A0C0A6C00FA9D0F /* SessionProtocol.swift in Sources */,
 				7837B2BF2A0C036D00FA9D0F /* Coordinator.swift in Sources */,
+				7837B2DB2A0C0E8E00FA9D0F /* Services.swift in Sources */,
+				7837B2CF2A0C094100FA9D0F /* Environment.swift in Sources */,
 				7837B2C22A0C045E00FA9D0F /* NavigationController.swift in Sources */,
+				7837B2D32A0C0A0800FA9D0F /* NetworkProvider.swift in Sources */,
+				7837B2DE2A0C127F00FA9D0F /* MusicNetworkService.swift in Sources */,
 				7837B2BB2A0C031A00FA9D0F /* AppCoordinator.swift in Sources */,
+				7837B2E02A0C12B500FA9D0F /* CommonNetworkService.swift in Sources */,
 				7837B2CB2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift in Sources */,
 				7837B2C72A0C05FE00FA9D0F /* ViewControllerFactory.swift in Sources */,
+				7837B2D72A0C0A4F00FA9D0F /* SessionManager.swift in Sources */,
+				7837B2D12A0C098300FA9D0F /* NetworkError.swift in Sources */,
 				7837B2B92A0C016300FA9D0F /* SearchViewController.swift in Sources */,
 				7837B2822A0BFA7E00FA9D0F /* AppDelegate.swift in Sources */,
 			);

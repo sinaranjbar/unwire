@@ -9,12 +9,16 @@ import Foundation
 import UIKit
 
 class SearchViewController: UIViewController, ViewControllerFactory {
-    typealias Dependencies = String
+    typealias Dependencies = MusicNetworkService
     
     weak var coordinator: AppCoordinator?
     
     static var storyboard: UIStoryboard = .main
     
-    var dependencies: String!
+    var dependencies: MusicNetworkService!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
