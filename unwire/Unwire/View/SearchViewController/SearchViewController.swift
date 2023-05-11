@@ -10,13 +10,13 @@ import UIKit
 import Combine
 
 class SearchViewController: UIViewController, ViewControllerFactory {
-    typealias Dependencies = MusicNetworkService
+    typealias Dependencies = (network:MusicNetworkService, imageCacheService: ImageCacheService)
     
     weak var coordinator: AppCoordinator?
     
     static var storyboard: UIStoryboard = .main
     
-    var dependencies: MusicNetworkService!
+    var dependencies: (network: MusicNetworkService, imageCacheService: ImageCacheService)!
     var networkProvider: NetworkProvider!
     var viewModel: SearchViewModel?
     
@@ -34,26 +34,31 @@ class SearchViewController: UIViewController, ViewControllerFactory {
     }()
     
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SearchViewModel(musicNetworkService: dependencies)
+        viewModel = SearchViewModel(musicNetworkService: dependencies.network)
         setupUI()
         setupDataSource()
     }
     
     func loadData(_ term: String){
+        activityIndicator.startAnimating()
         viewModel?.searchItem(term: term)
         
         viewModel?.$datasource.sink(receiveValue: { musics in
-            self.tableViewDataSource.refreshWithNewItems(musics)
+            if !musics.isEmpty {
+                self.activityIndicator.stopAnimating()
+                self.tableViewDataSource.refreshWithNewItems(musics)
+            }
         })
         .store(in: &cancellables)
     }
     
     private func setupDataSource(){
-        tableViewDataSource = TableViewDataSource(cellHeight: 100, items: [], tableView: tableView)
+        tableViewDataSource = TableViewDataSource(cellHeight: 100, items: [], tableView: tableView, imageCacheService: dependencies.imageCacheService)
         tableView.delegate = tableViewDataSource
         tableView.dataSource = tableViewDataSource
     }
@@ -74,7 +79,6 @@ extension SearchViewController: UISearchBarDelegate {
         }
         
         let requestWorkItem = DispatchWorkItem { [weak self] in
-            self?.view.endEditing(true)
             self?.loadData(searchText)
         }
         

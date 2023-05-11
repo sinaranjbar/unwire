@@ -12,14 +12,17 @@ class TableViewDataSource<T: TableViewCell>: NSObject, UITableViewDataSource, UI
     var cellHeight: CGFloat?
     var items: [T.CellViewModel] = []
     var tableView: UITableView
-
+    var imageCacheService: ImageCacheService?
+    
     init(cellHeight: CGFloat? = nil,
          items: [T.CellViewModel],
-         tableView: UITableView) {
+         tableView: UITableView,
+         imageCacheService: ImageCacheService? = nil) {
         self.cellHeight = cellHeight
         self.items = items
         self.tableView = tableView
-        
+        self.imageCacheService = imageCacheService
+        tableView.keyboardDismissMode = .onDrag
         if cellHeight == 0 || cellHeight == nil {
             self.tableView.estimatedRowHeight = UITableView.automaticDimension
             self.tableView.rowHeight = UITableView.automaticDimension
@@ -39,7 +42,8 @@ class TableViewDataSource<T: TableViewCell>: NSObject, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String.init(describing: T.self),
                                                  for: indexPath) as? T
-        cell?.configureCellWith(items[indexPath.row])
+        cell?.configureCellWith(items[indexPath.row],
+                                imageCacheService: imageCacheService)
         return cell ?? UITableViewCell()
     }
     

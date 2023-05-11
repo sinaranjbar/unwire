@@ -9,6 +9,7 @@ import Foundation
 
 protocol ServicesProtocol: AnyObject {
     var network: NetworkServices { get }
+    var imageCacheService: ImageCacheService { get }
 }
 
 struct NetworkServices {
@@ -21,8 +22,10 @@ struct NetworkServices {
 
 final class Services: ServicesProtocol {
     var network: NetworkServices
+    var imageCacheService: ImageCacheService
     
     init() {
         network = NetworkServices()
+        imageCacheService = ImageCacheService()
     }
 }

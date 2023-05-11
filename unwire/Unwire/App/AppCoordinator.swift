@@ -40,7 +40,8 @@ class AppCoordinator: NSObject, Coordinator {
     func goTo(destination: Destination){
         switch destination {
         case .Search:
-            let searchViewController = SearchViewController.make(services.network.musicNetworkService)
+            let searchViewController = SearchViewController.make((network: services.network.musicNetworkService,
+                                                                  imageCacheService: services.imageCacheService))
             searchViewController.coordinator = self
             navigationController.pushViewController(searchViewController, animated: true)
         }

@@ -9,5 +9,6 @@ import UIKit
 
 protocol TableViewCell: UITableViewCell {
     associatedtype CellViewModel
-    func configureCellWith(_ item: CellViewModel)
+    func configureCellWith(_ item: CellViewModel, imageCacheService: ImageCacheService?)
+    var imageCacheService: ImageCacheService? { get }
 }
