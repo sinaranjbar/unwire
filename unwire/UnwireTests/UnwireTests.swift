@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import unwire
+@testable import Unwire
 
 final class UnwireTests: XCTestCase {
 

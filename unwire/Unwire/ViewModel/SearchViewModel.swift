@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class SearchViewModel: ViewModelProtocol {
-    @Published private (set) var datasource: [MusicModel] = [MusicModel]()
+    @Published private (set) var datasource: [MusicModel] = []
     @Published private (set) var showError: Bool = false
     
     var title: String = "search".localized
@@ -19,15 +19,14 @@ class SearchViewModel: ViewModelProtocol {
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(musicNetworkService: MusicNetworkService) {
+    init(musicNetworkService: MusicNetworkService, musicRepository: MusicRepository = MusicRepository()) {
         self.networkService = musicNetworkService
-        self.musicRepository = MusicRepository()
+        self.musicRepository = musicRepository
     }
     
     func searchItem(term: String) {
         self.networkService.term = term
         musicRepository.searchTerm(musicNetworkService: networkService)
-        
         musicRepository.$musics.sink { musics in
             self.handleSuccess(data: musics)
         }

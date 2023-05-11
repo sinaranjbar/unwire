@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class MusicRepository: MusicRepositoryProtocol {
-    private (set) var client: NetworkProviderProtocol?
+    var client: NetworkProviderProtocol?
     
     @Published var musics = [MusicModel]()
     @Published var error: NetworkError?

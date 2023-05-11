@@ -25,7 +25,7 @@ class SearchViewController: UIViewController, ViewControllerFactory {
     
     private (set) var tableViewDataSource: TableViewDataSource<MusicCell>!
     
-    private lazy var searchBar: UISearchController = {
+    private (set) lazy var searchBar: UISearchController = {
         let search = UISearchController()
         search.searchBar.showsCancelButton = false
         search.searchBar.placeholder = "search".localized
