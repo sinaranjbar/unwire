@@ -28,7 +28,7 @@ class SearchViewController: UIViewController, ViewControllerFactory {
     private lazy var searchBar: UISearchController = {
         let search = UISearchController()
         search.searchBar.showsCancelButton = false
-        search.searchBar.placeholder = "Search"
+        search.searchBar.placeholder = "search".localized
         search.searchBar.sizeToFit()
         return search
     }()

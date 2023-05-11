@@ -12,7 +12,7 @@ class SearchViewModel: ViewModelProtocol {
     @Published private (set) var datasource: [MusicModel] = [MusicModel]()
     @Published private (set) var showError: Bool = false
     
-    var title: String = "Search"
+    var title: String = "search".localized
     var errorMessage: String?
     var musicRepository: MusicRepository
     var networkService: MusicNetworkService

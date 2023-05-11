@@ -19,15 +19,15 @@ extension NetworkError: CustomStringConvertible {
     var description: String {
         switch self {
         case .connectionError:
-            return "Internet Connection Error"
+            return "internet_connection_error".localized
         case .notFound:
-            return "Request not found"
+            return "request_not_found".localized
         case let .contentDecoding(error):
-            return "Error while decoding with \(error)"
+            return "error_while_decoding_with".localized + " \(error)"
         case .contentEmptyData:
-            return "The contyent data is empty"
+            return "the_content_data_is_empty".localized
         default:
-            return "Network Error with` \(self)` thrown"
+            return "network_error".localized
         }
     }
 }

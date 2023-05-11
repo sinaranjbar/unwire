@@ -28,7 +28,6 @@ final class ImageCacheService {
         
         urlSession.dataTask(with: url) { [weak self] (data, response, error) in
             if let error = error {
-                print("Couldn't download image: ", error)
                 completion(nil)
                 return
             }

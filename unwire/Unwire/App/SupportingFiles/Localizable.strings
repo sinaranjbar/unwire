@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Unwire
+
+  Created by Sina Ranjbar on 5/11/23.
+  
+*/
+"search" = "Search";
+"internet_connection_error" = "Internet Connection Error";
+"request_not_found" = "Request not found";
+"error_while_decoding_with" = "Error while decoding with";
+"the_content_data_is_empty" = "The content data is empty";
+"network_error" = "Network Error";
