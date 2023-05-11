@@ -11,16 +11,15 @@ protocol NetworkProviderProtocol {
     var urlSession: SessionProtocol { get }
     var service: NetworkService { get }
     
-    func request<T: Codable>(
-        dataType: T.Type,
-        onQueue: DispatchQueue,
-        completion: @escaping (Result<T, Error>) -> Void)
+    func request<T: Codable>(dataType: T.Type,
+                             onQueue: DispatchQueue,
+                             completion: @escaping (Result<T, Error>) -> Void)
 }
 
 final class NetworkProvider: NetworkProviderProtocol {
-    var urlSession: SessionProtocol
+    private (set) var urlSession: SessionProtocol
     
-    var service: NetworkService
+    private (set) var service: NetworkService
     
     init(urlSession: SessionProtocol = SessionManager(), service: NetworkService){
         self.urlSession = urlSession
@@ -37,6 +36,4 @@ final class NetworkProvider: NetworkProviderProtocol {
         }
         task.resume()
     }
-    
-    
 }

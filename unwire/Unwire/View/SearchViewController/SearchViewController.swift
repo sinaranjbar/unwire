@@ -17,8 +17,17 @@ class SearchViewController: UIViewController, ViewControllerFactory {
     
     var dependencies: MusicNetworkService!
     
+    var networkProvider: NetworkProvider!
+    
+    var viewModel: SearchViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel = SearchViewModel(musicNetworkService: dependencies)
+        loadData()
+    }
+    
+    func loadData(){
+        viewModel?.searchItem(term: "eminem")
     }
 }

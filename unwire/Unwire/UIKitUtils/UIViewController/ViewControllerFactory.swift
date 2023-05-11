@@ -9,7 +9,8 @@ import UIKit
 
 protocol ViewControllerFactory: UIViewController {
     associatedtype Dependencies
-
+    associatedtype ViewModelItem
+    
     typealias ViewController = Self
 
     static var storyboard: UIStoryboard { get }
@@ -17,6 +18,8 @@ protocol ViewControllerFactory: UIViewController {
     var dependencies: Dependencies! { get set }
     
     var coordinator: AppCoordinator? { get set }
+    
+    var viewModel: ViewModelItem? { get set }
 }
 
 extension ViewControllerFactory {

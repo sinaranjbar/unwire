@@ -29,6 +29,12 @@
 		7837B2DB2A0C0E8E00FA9D0F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2DA2A0C0E8E00FA9D0F /* Services.swift */; };
 		7837B2DE2A0C127F00FA9D0F /* MusicNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2DD2A0C127F00FA9D0F /* MusicNetworkService.swift */; };
 		7837B2E02A0C12B500FA9D0F /* CommonNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2DF2A0C12B500FA9D0F /* CommonNetworkService.swift */; };
+		7837B2E22A0C184B00FA9D0F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2E12A0C184B00FA9D0F /* SearchViewModel.swift */; };
+		7837B2E42A0C189400FA9D0F /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2E32A0C189400FA9D0F /* ViewModelProtocol.swift */; };
+		7837B2E62A0C18D700FA9D0F /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2E52A0C18D700FA9D0F /* MusicModel.swift */; };
+		7837B2E92A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2E82A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift */; };
+		7837B2EB2A0C1B0700FA9D0F /* MusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2EA2A0C1B0700FA9D0F /* MusicRepository.swift */; };
+		7837B2EE2A0C411800FA9D0F /* MusicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2ED2A0C411800FA9D0F /* MusicList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		7837B2DA2A0C0E8E00FA9D0F /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		7837B2DD2A0C127F00FA9D0F /* MusicNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicNetworkService.swift; sourceTree = "<group>"; };
 		7837B2DF2A0C12B500FA9D0F /* CommonNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNetworkService.swift; sourceTree = "<group>"; };
+		7837B2E12A0C184B00FA9D0F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		7837B2E32A0C189400FA9D0F /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		7837B2E52A0C18D700FA9D0F /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		7837B2E82A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepositoryProtocol.swift; sourceTree = "<group>"; };
+		7837B2EA2A0C1B0700FA9D0F /* MusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepository.swift; sourceTree = "<group>"; };
+		7837B2ED2A0C411800FA9D0F /* MusicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +177,8 @@
 		7837B2B22A0BFE1000FA9D0F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7837B2E12A0C184B00FA9D0F /* SearchViewModel.swift */,
+				7837B2E32A0C189400FA9D0F /* ViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,6 +186,7 @@
 		7837B2B32A0BFE1D00FA9D0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7837B2EC2A0C410E00FA9D0F /* Music */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,10 +295,29 @@
 		7837B2DC2A0C126500FA9D0F /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
+				7837B2E72A0C1A9100FA9D0F /* Repository */,
 				7837B2DF2A0C12B500FA9D0F /* CommonNetworkService.swift */,
 				7837B2DD2A0C127F00FA9D0F /* MusicNetworkService.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		7837B2E72A0C1A9100FA9D0F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2E82A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift */,
+				7837B2EA2A0C1B0700FA9D0F /* MusicRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7837B2EC2A0C410E00FA9D0F /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2E52A0C18D700FA9D0F /* MusicModel.swift */,
+				7837B2ED2A0C411800FA9D0F /* MusicList.swift */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,17 +454,23 @@
 				7837B2D52A0C0A2600FA9D0F /* NetworkService.swift in Sources */,
 				7837B2D92A0C0A6C00FA9D0F /* SessionProtocol.swift in Sources */,
 				7837B2BF2A0C036D00FA9D0F /* Coordinator.swift in Sources */,
+				7837B2E62A0C18D700FA9D0F /* MusicModel.swift in Sources */,
 				7837B2DB2A0C0E8E00FA9D0F /* Services.swift in Sources */,
 				7837B2CF2A0C094100FA9D0F /* Environment.swift in Sources */,
 				7837B2C22A0C045E00FA9D0F /* NavigationController.swift in Sources */,
 				7837B2D32A0C0A0800FA9D0F /* NetworkProvider.swift in Sources */,
 				7837B2DE2A0C127F00FA9D0F /* MusicNetworkService.swift in Sources */,
+				7837B2EE2A0C411800FA9D0F /* MusicList.swift in Sources */,
+				7837B2E42A0C189400FA9D0F /* ViewModelProtocol.swift in Sources */,
+				7837B2EB2A0C1B0700FA9D0F /* MusicRepository.swift in Sources */,
 				7837B2BB2A0C031A00FA9D0F /* AppCoordinator.swift in Sources */,
 				7837B2E02A0C12B500FA9D0F /* CommonNetworkService.swift in Sources */,
 				7837B2CB2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift in Sources */,
 				7837B2C72A0C05FE00FA9D0F /* ViewControllerFactory.swift in Sources */,
 				7837B2D72A0C0A4F00FA9D0F /* SessionManager.swift in Sources */,
+				7837B2E92A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift in Sources */,
 				7837B2D12A0C098300FA9D0F /* NetworkError.swift in Sources */,
+				7837B2E22A0C184B00FA9D0F /* SearchViewModel.swift in Sources */,
 				7837B2B92A0C016300FA9D0F /* SearchViewController.swift in Sources */,
 				7837B2822A0BFA7E00FA9D0F /* AppDelegate.swift in Sources */,
 			);

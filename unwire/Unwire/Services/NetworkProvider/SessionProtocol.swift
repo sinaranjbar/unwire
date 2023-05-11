@@ -8,8 +8,7 @@
 import Foundation
 
 protocol SessionProtocol {
-    func dataTask<T: Decodable>(
-        _ request: URLRequest,
-        dataType: T.Type,
-        completion: @escaping CodableResponse<T>) -> URLSessionDataTask
+    func dataTask<T: Decodable>(_ request: URLRequest,
+                                dataType: T.Type,
+                                completion: @escaping CodableResponse<T>) -> URLSessionDataTask
 }

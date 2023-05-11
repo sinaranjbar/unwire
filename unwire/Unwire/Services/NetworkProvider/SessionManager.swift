@@ -16,10 +16,9 @@ class SessionManager: SessionProtocol {
         self.session = session
     }
     
-    func dataTask<T: Decodable>(
-        _ request: URLRequest,
-        dataType: T.Type,
-        completion: @escaping CodableResponse<T> ) -> URLSessionDataTask {
+    func dataTask<T: Decodable>(_ request: URLRequest,
+                                dataType: T.Type,
+                                completion: @escaping CodableResponse<T> ) -> URLSessionDataTask {
         return session.dataTask(with: request) { [weak self] data, response, error in
             completion(Result<T, Error> {
                 guard let self = self else {
