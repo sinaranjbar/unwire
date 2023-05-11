@@ -8,5 +8,9 @@
 import Foundation
 
 struct MusicModel: Codable {
-    
+    let releaseDate: String
+    let artworkUrl100: String
+    let trackName: String
+    let artistName: String
+    let collectionName: String
 }

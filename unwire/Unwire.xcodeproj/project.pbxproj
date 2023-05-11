@@ -35,6 +35,10 @@
 		7837B2E92A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2E82A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift */; };
 		7837B2EB2A0C1B0700FA9D0F /* MusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2EA2A0C1B0700FA9D0F /* MusicRepository.swift */; };
 		7837B2EE2A0C411800FA9D0F /* MusicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2ED2A0C411800FA9D0F /* MusicList.swift */; };
+		7837B2F12A0CE95E00FA9D0F /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2F02A0CE95D00FA9D0F /* TableViewDataSource.swift */; };
+		7837B2F32A0CE97800FA9D0F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2F22A0CE97800FA9D0F /* TableViewCell.swift */; };
+		7837B2F62A0CEA0E00FA9D0F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7837B2F52A0CEA0E00FA9D0F /* MusicCell.swift */; };
+		7837B2F82A0CEBC100FA9D0F /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7837B2F72A0CEBC000FA9D0F /* MusicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		7837B2E82A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepositoryProtocol.swift; sourceTree = "<group>"; };
 		7837B2EA2A0C1B0700FA9D0F /* MusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepository.swift; sourceTree = "<group>"; };
 		7837B2ED2A0C411800FA9D0F /* MusicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicList.swift; sourceTree = "<group>"; };
+		7837B2F02A0CE95D00FA9D0F /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		7837B2F22A0CE97800FA9D0F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7837B2F52A0CEA0E00FA9D0F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		7837B2F72A0CEBC000FA9D0F /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,7 @@
 		7837B2B72A0C002F00FA9D0F /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7837B2F42A0CEA0200FA9D0F /* Cells */,
 				7837B2B82A0C016300FA9D0F /* SearchViewController.swift */,
 			);
 			path = SearchViewController;
@@ -230,6 +239,7 @@
 		7837B2BC2A0C034500FA9D0F /* UIKitUtils */ = {
 			isa = PBXGroup;
 			children = (
+				7837B2EF2A0CE91E00FA9D0F /* TableView */,
 				7837B2C52A0C05E000FA9D0F /* UIViewController */,
 				7837B2C02A0C045500FA9D0F /* NavigationController */,
 				7837B2BD2A0C035800FA9D0F /* Coordinator */,
@@ -318,6 +328,24 @@
 				7837B2ED2A0C411800FA9D0F /* MusicList.swift */,
 			);
 			path = Music;
+			sourceTree = "<group>";
+		};
+		7837B2EF2A0CE91E00FA9D0F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2F02A0CE95D00FA9D0F /* TableViewDataSource.swift */,
+				7837B2F22A0CE97800FA9D0F /* TableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		7837B2F42A0CEA0200FA9D0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7837B2F52A0CEA0E00FA9D0F /* MusicCell.swift */,
+				7837B2F72A0CEBC000FA9D0F /* MusicCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +455,7 @@
 				7837B28E2A0BFA8100FA9D0F /* LaunchScreen.storyboard in Resources */,
 				7837B28B2A0BFA8100FA9D0F /* Assets.xcassets in Resources */,
 				7837B2892A0BFA7E00FA9D0F /* Main.storyboard in Resources */,
+				7837B2F82A0CEBC100FA9D0F /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,15 +489,18 @@
 				7837B2C22A0C045E00FA9D0F /* NavigationController.swift in Sources */,
 				7837B2D32A0C0A0800FA9D0F /* NetworkProvider.swift in Sources */,
 				7837B2DE2A0C127F00FA9D0F /* MusicNetworkService.swift in Sources */,
+				7837B2F32A0CE97800FA9D0F /* TableViewCell.swift in Sources */,
 				7837B2EE2A0C411800FA9D0F /* MusicList.swift in Sources */,
 				7837B2E42A0C189400FA9D0F /* ViewModelProtocol.swift in Sources */,
 				7837B2EB2A0C1B0700FA9D0F /* MusicRepository.swift in Sources */,
 				7837B2BB2A0C031A00FA9D0F /* AppCoordinator.swift in Sources */,
 				7837B2E02A0C12B500FA9D0F /* CommonNetworkService.swift in Sources */,
 				7837B2CB2A0C075600FA9D0F /* UIStoryboard+AvailableStoryboards.swift in Sources */,
+				7837B2F12A0CE95E00FA9D0F /* TableViewDataSource.swift in Sources */,
 				7837B2C72A0C05FE00FA9D0F /* ViewControllerFactory.swift in Sources */,
 				7837B2D72A0C0A4F00FA9D0F /* SessionManager.swift in Sources */,
 				7837B2E92A0C1ABB00FA9D0F /* MusicRepositoryProtocol.swift in Sources */,
+				7837B2F62A0CEA0E00FA9D0F /* MusicCell.swift in Sources */,
 				7837B2D12A0C098300FA9D0F /* NetworkError.swift in Sources */,
 				7837B2E22A0C184B00FA9D0F /* SearchViewModel.swift in Sources */,
 				7837B2B92A0C016300FA9D0F /* SearchViewController.swift in Sources */,
@@ -649,6 +681,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BUUFKJ6LSY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Unwire/App/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -656,6 +689,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,6 +710,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BUUFKJ6LSY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Unwire/App/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -683,6 +718,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

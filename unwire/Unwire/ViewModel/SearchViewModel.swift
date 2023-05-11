@@ -6,19 +6,18 @@
 //
 
 import Foundation
+import Combine
 
 class SearchViewModel: ViewModelProtocol {
+    @Published private (set) var datasource: [MusicModel] = [MusicModel]()
+    @Published private (set) var showError: Bool = false
+    
     var title: String = "Search"
-    
-    var showError: Bool = false
-    
     var errorMessage: String?
-    
-    var datasource: [MusicModel] = [MusicModel]()
-    
     var musicRepository: MusicRepository
-    
     var networkService: MusicNetworkService
+    
+    private var cancellables = Set<AnyCancellable>()
     
     init(musicNetworkService: MusicNetworkService) {
         self.networkService = musicNetworkService
@@ -28,5 +27,28 @@ class SearchViewModel: ViewModelProtocol {
     func searchItem(term: String) {
         self.networkService.term = term
         musicRepository.searchTerm(musicNetworkService: networkService)
+        
+        musicRepository.$musics.sink { musics in
+            self.handleSuccess(data: musics)
+        }
+        .store(in: &cancellables)
+        
+        musicRepository.$error.sink { error in
+            guard let error = error else { return }
+            self.handleFailure(error: error)
+        }
+        .store(in: &cancellables)
+    }
+}
+
+private extension SearchViewModel {
+    func handleSuccess(data: [MusicModel]) {
+        datasource = data
+    }
+    
+    func handleFailure(error: NetworkError) {
+        errorMessage = "\(error)"
+        datasource = []
+        showError = true
     }
 }
